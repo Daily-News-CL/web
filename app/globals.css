@@ -1,0 +1,39 @@
+@import "tailwindcss";
+
+:root {
+  --color-paper: #f5f1e8;
+  --color-paper-dim: #ece5d5;
+  --color-ink: #1c1a17;
+  --color-rust: #c1481d;
+  --color-rust-dim: #9c3a16;
+  --color-teal: #1f4741;
+  --color-teal-dim: #16332e;
+  --color-muted: #8a8275;
+}
+
+@theme inline {
+  --color-paper: var(--color-paper);
+  --color-paper-dim: var(--color-paper-dim);
+  --color-ink: var(--color-ink);
+  --color-rust: var(--color-rust);
+  --color-rust-dim: var(--color-rust-dim);
+  --color-teal: var(--color-teal);
+  --color-teal-dim: var(--color-teal-dim);
+  --color-muted: var(--color-muted);
+  --font-serif: var(--font-fraunces);
+  --font-sans: var(--font-plex-sans);
+}
+
+body {
+  background: var(--color-paper);
+  color: var(--color-ink);
+}
+
+@layer utilities {
+  .label-caps {
+    font-family: var(--font-sans);
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    font-weight: 600;
+  }
+}
